@@ -30,7 +30,7 @@ namespace Tests.SDET.Specs.Steps
         [Then(@"I am shown the JustChrome page")]
         public void ThenIAmShownTheJustChromePage()
         {
-            
+            Console.WriteLine("just chrome page");
         }
 
         [Given(@"I am using Internet Explorer")]
