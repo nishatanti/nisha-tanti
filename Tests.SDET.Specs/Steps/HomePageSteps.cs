@@ -54,6 +54,15 @@ namespace Tests.SDET.Specs.Steps
             Assert.Contains("www.youtube.com", ((HttpResponseMessage)_scenarioContext["response"]).Content.ReadAsStringAsync().Result);
         }
 
+        [Then(@"there are three (.*) links of social media displayed")]
+        public void ThenThereAreThreeWww_Facebook_ComLinksOfSocialMediaDisplayed(string url)
+        {
+            Assert.Contains(url, ((HttpResponseMessage)_scenarioContext["response"]).Content.ReadAsStringAsync().Result);
+        }
+
+
+    
+
         public void Dispose()
         {
             _factory.Dispose();
